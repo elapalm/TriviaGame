@@ -34,13 +34,18 @@ document.ready(){
             }
         ]
 
-        
+
     // Timer total time alloted: 60 seconds. 10 seconds per question.
 
+    // Start the game
 
+    
     // cheecking for right or wrong answers: when the user clicks on an answer the results will be stored in the rightAnswer/wrongAnswer variables
 
-    $("question1").text()
+    $("quest-1-guesses").on(click.theQuiz.answer);
+        (rightAnswer === rightAns);
+        console.log(rightAns)
+
 
 
 }
