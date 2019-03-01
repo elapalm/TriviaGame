@@ -10,7 +10,6 @@ document.ready(){
     var theQuiz = [{
                 answer: ["Februaary 14th, 1912", "January 1th, 1862", "February 24th 1863", "July 4th 1776"];
                 rightAns: [0];
-                wrongAns: [1, 2, 3];
             },
              {
                 answer: ["Phoenix", "Flagstaff", "Tucson", "Mesa"];
@@ -39,7 +38,7 @@ document.ready(){
 
     // Start the game
 
-    
+
     // cheecking for right or wrong answers: when the user clicks on an answer the results will be stored in the rightAnswer/wrongAnswer variables
 
     $("quest-1-guesses").on(click.theQuiz.answer);
