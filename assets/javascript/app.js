@@ -1,50 +1,66 @@
-// at the start of the game the questions will apear and the timer will start when the user clicks on the page
-// game set up- right answer count, wrong answer count, an object with array for each question for 1 right and 3 wrong answers, 
 
-
-document.ready(){
+//document.ready(function() {
+    // at the start of the game the questions will apear and the timer will start when the user clicks on the page
+    // game set up- right answer count, wrong answer count, an object with array for each question for 1 right and 3 wrong answers, 
     var rightAnswer = [];
     var wrongAnswer = [];
     var countdown = [];
 
     var theQuiz = [{
-                answer: ["Februaary 14th, 1912", "January 1th, 1862", "February 24th 1863", "July 4th 1776"];
-                rightAns: [0];
+                answer1: ["Februaary 14th, 1912", "January 1th, 1862", "February 24th 1863", "July 4th 1776"],
+                rightAns: 0,
             },
              {
-                answer: ["Phoenix", "Flagstaff", "Tucson", "Mesa"];
-                rightAns: [2];
+                answer2: ["Phoenix", "Flagstaff", "Tucson", "Mesa"],
+                rightAns: 2,
             },
             {
-                answer: ["362", "277", "159", "223"];
-                rightAns: [1];
+                answer3: ["362", "277", "159", "223"],
+                rightAns: 1,
             },
             {
-                answer: ["3", "4", "5", "6"];
-                rightAns: [2];
+                answer4: ["3", "4", "5", "6"],
+                rightAns: 2,
             },
             {
-                answer: ["Cottonwood", "Wilcox", "Sierra Vista", "Winslow"];
-                rightAns: [3];
+                answer5: ["Cottonwood", "Wilcox", "Sierra Vista", "Winslow"],
+                rightAns: 3,
             },
             {
-                answer: ["5", "11", "16", "1 too many!!!"];
-                rightAns: [2];
+                answer6: ["5", "11", "16", "1 too many!!!"],
+                rightAns: 2,
             }
         ]
 
-
-    // Timer total time alloted: 60 seconds. 10 seconds per question.
-
     // Start the game
-
+    // Timer total time alloted: 60 seconds. 10 seconds per question.
+    var timer;
+    var count = 60;
+    
+    $("#counter").text(count);
+    //update display
+    
+    timer = setTimeout(update, 1000);
+    
+    function update()
+    {
+        if (count > 0)
+        {
+           $("#timer").text("Time Remaining: " + --count);
+           timer = setTimeout(update, 1000);
+        }
+        
+    }
+    
 
     // cheecking for right or wrong answers: when the user clicks on an answer the results will be stored in the rightAnswer/wrongAnswer variables
 
     $("quest-1-guesses").on(click.theQuiz.answer);
         (rightAnswer === rightAns);
+        $("question-1-guesses").text(theQuiz.answer1)
         console.log(rightAns)
+    
 
 
 
-}
+//})
