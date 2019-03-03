@@ -32,33 +32,30 @@
             }
         ]
 
-    // Start the game
+    
     // Timer total time alloted: 60 seconds. 10 seconds per question.
     var timer;
     var count = 60;
     
-    $("#counter").text(count);
-    //update display
-    
-    timer = setTimeout(update, 1000);
-    
-    function update()
-    {
+    $("#counter").text(count);    
+    timer = setTimeout(update, 1000);    
+    function update() {
         if (count > 0)
         {
            $("#timer").text("Time Remaining: " + --count);
            timer = setTimeout(update, 1000);
-        }
+        }        
+    };
+    
+    // Start the game
+    function gameStart() {
         
     }
-    
+    $("#question1").text("Options: " + theQuiz.answer1);
 
     // cheecking for right or wrong answers: when the user clicks on an answer the results will be stored in the rightAnswer/wrongAnswer variables
 
-    $("quest-1-guesses").on(click.theQuiz.answer);
-        (rightAnswer === rightAns);
-        $("question-1-guesses").text(theQuiz.answer1)
-        console.log(rightAns)
+
     
 
 
