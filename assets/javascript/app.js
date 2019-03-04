@@ -49,9 +49,15 @@
     
     // Start the game
     function gameStart() {
+        $("#question1").html("Options: " + theQuiz.answer1);
+        $("#question2").html("Options: " + theQuiz.answer2);
+        $("#question3").html("Options: " + theQuiz.answer3);
+        $("#question4").html("Options: " + theQuiz.answer4);
+        $("#question5").html("Options: " + theQuiz.answer5);
+        $("#question6").html("Options: " + theQuiz.answer6);
+
         
     }
-    $("#question1").text("Options: " + theQuiz.answer1);
 
     // cheecking for right or wrong answers: when the user clicks on an answer the results will be stored in the rightAnswer/wrongAnswer variables
 
