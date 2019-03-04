@@ -49,12 +49,12 @@
     
     // Start the game
     function gameStart() {
-        $("#question1").html("Options: " + theQuiz.answer1);
-        $("#question2").html("Options: " + theQuiz.answer2);
-        $("#question3").html("Options: " + theQuiz.answer3);
-        $("#question4").html("Options: " + theQuiz.answer4);
-        $("#question5").html("Options: " + theQuiz.answer5);
-        $("#question6").html("Options: " + theQuiz.answer6);
+        $("#question-1-guesses").html("Options: " + theQuiz.answer1);
+        $("#question-2-guesses").html("Options: " + theQuiz.answer2);
+        $("#question-3-guesses").html("Options: " + theQuiz.answer3);
+        $("#question-4-guesses").html("Options: " + theQuiz.answer4);
+        $("#question-5-guesses").html("Options: " + theQuiz.answer5);
+        $("#question-6-guesses").html("Options: " + theQuiz.answer6);
 
         
     }
